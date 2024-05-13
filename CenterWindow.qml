@@ -47,7 +47,6 @@ Window {
     function startDrawing() {
         console.log("Drawing animation started.");
         if (!pleaseGo.animationRunning) {
-            console.log("여기가 실행 됐냐?")
             plzGogo.start();
             pleaseGo.animationRunning = true;
         }
