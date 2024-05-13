@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>LeftWindow.qml</file>
+        <file>RightWindow.qml</file>
+        <file>CenterWindow.qml</file>
+    </qresource>
+</RCC>
