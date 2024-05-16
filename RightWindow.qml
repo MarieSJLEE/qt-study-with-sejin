@@ -29,7 +29,7 @@ Window {
             property: "x"
             from: -10
             to: 400
-            duration: 1500
+            duration: 3000
             easing.type: Easing.InOutQuad
 
             onRunningChanged: {
