@@ -23,6 +23,18 @@ Window {
         color: "blue"
 
         property bool animationRunning: false
+        property int cnt: 0
+
+        onXChanged: {
+            //console.log("x 값 변경됨: " + x)
+            if(x >= 550){
+                if(!cnt){
+                    console.log("Center딱 한번만 찍혀야됨")
+                    animationController.onAnimationCompleted(2)
+                    cnt++;
+                }
+            }
+        }
 
         NumberAnimation {
             id: plzGogo
@@ -30,7 +42,7 @@ Window {
             property: "x"
             from: -10
             to: 650
-            duration: 3000
+            duration: 6000
             easing.type: Easing.InOutQuad
 
             onRunningChanged: {
@@ -38,7 +50,6 @@ Window {
                 if(!running) {
                     console.log("END!!!!!")
                     pleaseGo.animationRunning = false;
-                    animationController.onAnimationCompleted(2);
                 }
             }
         }
