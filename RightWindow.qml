@@ -11,15 +11,13 @@ Window {
     x: Screen.width/2 + 300
     y: Screen.height/2 - height/2
 
-    Rectangle{
+    Image{
+        source: 'qrc:/carImage.png'
         id: pleaseGo
-        width: 50
-        height: 50
-        x: -50
+        width: 100
+        height: 100
+        x: -100
         anchors.verticalCenter: parent.verticalCenter
-        border.color: "yellow"
-        border.width: 4
-        color: "blue"
 
         property bool animationRunning: false
 
@@ -27,7 +25,7 @@ Window {
             id: plzGogo
             target: pleaseGo
             property: "x"
-            from: -10
+            from: -100
             to: 400
             duration: 3000
             easing.type: Easing.InOutQuad

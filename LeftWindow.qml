@@ -13,21 +13,19 @@ Window {
 
     signal drawFinished(int message)
 
-    Rectangle {
+    Image {
+        source: 'qrc:/carImage.png'
         id: pleaseGo
-        width: 50
-        height: 50
+        width: 100
+        height: 100
         x: 100
         anchors.verticalCenter: parent.verticalCenter
-        border.color: "yellow"
-        border.width: 4
-        color: "blue"
 
         property int cnt: 0
 
         onXChanged: {
             //console.log("x 값 변경됨: " + x)
-            if(x >= 350){
+            if(x >= 241){
                 if(!cnt){
                     console.log("Left 딱 한번만 찍혀야됨")
                     animationController.onAnimationCompleted(1)
