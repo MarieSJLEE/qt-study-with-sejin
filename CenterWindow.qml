@@ -12,22 +12,20 @@ Window {
     x: Screen.width / 2 - width / 2
     y: Screen.height / 2 - height / 2
 
-    Rectangle {
+    Image {
+        source: 'qrc:/carImage.png'
         id: pleaseGo
-        width: 50
-        height: 50
-        x: -50
+        width: 100
+        height: 100
+        x: -100
         anchors.verticalCenter: parent.verticalCenter
-        border.color: "yellow"
-        border.width: 4
-        color: "blue"
 
         property bool animationRunning: false
         property int cnt: 0
 
         onXChanged: {
             //console.log("x 값 변경됨: " + x)
-            if(x >= 550){
+            if(x >= 477){
                 if(!cnt){
                     console.log("Center딱 한번만 찍혀야됨")
                     animationController.onAnimationCompleted(2)
@@ -40,7 +38,7 @@ Window {
             id: plzGogo
             target: pleaseGo
             property: "x"
-            from: -10
+            from: -100
             to: 650
             duration: 6000
             easing.type: Easing.InOutQuad
