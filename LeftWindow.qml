@@ -25,7 +25,7 @@ Window {
 
         onXChanged: {
             //console.log("x 값 변경됨: " + x)
-            if(x >= 241){
+            if(x >= 103){
                 if(!cnt){
                     console.log("Left 딱 한번만 찍혀야됨")
                     animationController.onAnimationCompleted(1)
@@ -46,8 +46,8 @@ Window {
             target: pleaseGo
             property: "x"
             from: 100
-            to: 400
-            duration: 3000
+            to: 600
+            duration: 3600
             easing.type: Easing.InOutQuad
 
             onRunningChanged: {
