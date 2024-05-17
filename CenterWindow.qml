@@ -17,7 +17,7 @@ Window {
         id: pleaseGo
         width: 100
         height: 100
-        x: -100
+        x: -200
         anchors.verticalCenter: parent.verticalCenter
 
         property bool animationRunning: false
@@ -25,7 +25,7 @@ Window {
 
         onXChanged: {
             //console.log("x 값 변경됨: " + x)
-            if(x >= 477){
+            if(x >= 160){
                 if(!cnt){
                     console.log("Center딱 한번만 찍혀야됨")
                     animationController.onAnimationCompleted(2)
@@ -38,9 +38,9 @@ Window {
             id: plzGogo
             target: pleaseGo
             property: "x"
-            from: -100
-            to: 650
-            duration: 6000
+            from: -200
+            to: 1000
+            duration: 6750
             easing.type: Easing.InOutQuad
 
             onRunningChanged: {

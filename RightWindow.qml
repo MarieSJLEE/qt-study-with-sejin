@@ -16,7 +16,7 @@ Window {
         id: pleaseGo
         width: 100
         height: 100
-        x: -100
+        x: -200
         anchors.verticalCenter: parent.verticalCenter
 
         property bool animationRunning: false
@@ -25,9 +25,9 @@ Window {
             id: plzGogo
             target: pleaseGo
             property: "x"
-            from: -100
-            to: 400
-            duration: 3000
+            from: -200
+            to: 600
+            duration: 4000
             easing.type: Easing.InOutQuad
 
             onRunningChanged: {
